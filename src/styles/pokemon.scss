@@ -1,0 +1,141 @@
+.card {
+  width: 15rem;
+  margin: 3%;
+  background-color: transparent;
+  perspective: 1000px;
+  display: grid;
+}
+
+.types {
+  display: flex;
+  flex-direction: row;
+}
+
+.type {
+  margin: 0 1rem;
+  padding: 1px;
+  width: 5rem;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cardInner {
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+.cardFront, .cardBack {
+  background: rgba( 255, 255, 255, 0.25 );
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  height: 20rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.cardFront {
+  align-items: center;
+
+  & img {
+    max-width: 100%;
+  }
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+}
+
+@mixin typeColor($backgroundColor, $color) {
+  background-color: $backgroundColor;
+  color: $color;
+}
+
+.normal {
+  @include typeColor(#808080, white);
+}
+
+.fire {
+  @include typeColor(#ff7f50, white);
+}
+
+.water {
+  @include typeColor(#468499, white);
+}
+
+.grass {
+  @include typeColor(#bada55, inherit);
+}
+
+.flying {
+  @include typeColor(#afeeee, inherit);
+}
+
+.fighting {
+  @include typeColor(#8b0000, white);
+}
+
+.poison {
+  @include typeColor(#660066, white);
+}
+
+.electric {
+  @include typeColor(#ffff66, inherit);
+}
+
+.ground {
+  @include typeColor(#daa520, white);
+}
+
+.rock {
+  @include typeColor(#808080, white);
+}
+
+.psychic {
+  @include typeColor(#f6546a, white);
+}
+
+.ice {
+  @include typeColor(#00ced1, white);
+}
+
+.bug {
+  @include typeColor(#8ead37, inherit);
+}
+
+.ghost {
+  @include typeColor(#468499, white);
+}
+
+.steel {
+  @include typeColor(#c0c0c0, inherit);
+}
+
+.dragon {
+  @include typeColor(#133337, white);
+}
+
+.dark {
+  @include typeColor(#666666, white);
+}
+
+.fairy {
+  @include typeColor(#ffb6c1, inherit);
+}
+
+.shadow {
+  @include typeColor(grey, inherit);
+}
+
+.unknown {
+  @include typeColor(inherit, inherit);
+}

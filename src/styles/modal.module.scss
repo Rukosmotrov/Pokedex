@@ -1,0 +1,50 @@
+.modalWindow {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  &.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.modalContent {
+  display: flex;
+  padding: 3rem;
+  background: white;
+  border-radius: 12px;
+  min-width: 50vw;
+  flex-direction: row;
+}
+
+.selectedTypes {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+
+
+  & .type {
+    display: flex;
+    justify-content: space-between;
+    background-color: #8f9093;
+    color: white;
+    border-radius: 16px;
+    padding: 5px;
+    margin-top: 1rem;
+
+    & div {
+      margin: 0 .5rem;
+    }
+  }
+
+  & .type:hover {
+    cursor: pointer;
+  }
+}

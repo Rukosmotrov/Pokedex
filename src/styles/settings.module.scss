@@ -1,0 +1,74 @@
+.settings {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  width: 50vw;
+}
+
+.openModal {
+  background: #eaebed;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 5px;
+  display: flex;
+
+  &:hover {
+    cursor: pointer;
+    background: #d8d8dc;
+  }
+}
+
+.cardsCount {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-self: flex-end;
+  width: 100px;
+
+  margin: 2rem;
+  color: orangered;
+
+  & .selectedCount {
+    color: grey;
+  }
+
+  & div:hover {
+    cursor: pointer;
+  }
+
+  & span {
+    margin: 0 .5rem;
+  }
+}
+
+.selectedTypes {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  margin-left: 10%;
+
+
+  & .type {
+    display: flex;
+    justify-content: space-between;
+    background-color: #8f9093;
+    color: white;
+    border-radius: 16px;
+    padding: 5px;
+    margin-left: 1rem;
+
+    & div {
+      margin: 0 .5rem;
+    }
+  }
+
+  & .type:hover {
+    cursor: pointer;
+  }
+}
+
+.empty {
+  display: none;
+}

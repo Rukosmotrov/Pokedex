@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+
+  & input, button {
+    height: 3vh;
+    padding: .2rem;
+    border-radius: 12px;
+  }
+
+  & input {
+    border: 2px solid black;
+    width: 50vw;
+  }
+
+  & button {
+    min-width: 5vw;
+    height: 4vh;
+    margin-left: 1rem;
+    background: #30bdbd;
+    border: none;
+  }
+  & button:hover {
+    cursor: pointer;
+    background: #2adede;
+  }
+}
+

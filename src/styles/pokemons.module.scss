@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.pokemonsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: unset;
+  flex-wrap: wrap;
+
+  & h1 {
+    color: grey;
+  }
+}
