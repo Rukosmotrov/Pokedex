@@ -4,13 +4,18 @@ import '../styles/pokemon.scss';
 const Pokemon = ({pokemon, image}) => {
     const [cardFlipped, setCardFlipped] = useState(false);
     const [side, setSide] = useState(false);
+    const [cardIsFlipping, setCardIsFlipping] = useState (false);
 
     const flipCard = () => {
-        setCardFlipped(!cardFlipped);
-        setTimeout(() => {
-            setSide(!side);
+        if (cardIsFlipping === false) {
+            setCardIsFlipping(true);
             setCardFlipped(!cardFlipped);
-        }, 200);
+            setTimeout(() => {
+                setSide(!side);
+                setCardFlipped(!cardFlipped);
+                setCardIsFlipping(false);
+            }, 200);
+        }
     }
 
 

@@ -48,3 +48,24 @@
     cursor: pointer;
   }
 }
+
+.select {
+  background-color: #d3d4d7;
+  border-radius: 2px;
+  border: none;
+  padding: 5px 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .modalWindow {
+    padding: 1rem;
+  }
+
+  .modalContent {
+    flex-direction: column;
+  }
+
+  .selectedTypes {
+    margin-top: 2rem;
+  }
+}

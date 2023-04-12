@@ -5,6 +5,7 @@ import {Context} from "../context";
 const Controls = () => {
     const [searchText, setSearchText] = useState('');
     const {setSearchedPokemon, setNotFound} = useContext(Context);
+    const [searchActive, setSearchActive] = useState(false);
 
     const findPokemon = async () => {
         await fetch(`https://pokeapi.co/api/v2/pokemon/${searchText.toLowerCase()}`)
@@ -29,16 +30,14 @@ const Controls = () => {
 
     return (
         <div className={classes.container}>
-            <div className={classes.controlsWrapper}>
-                <input
-                    type="text"
-                    placeholder={'Pikachu'}
-                    value={searchText}
-                    onChange={e => setSearchText(e.target.value)}
-                    onKeyDown={e => e.key === 'Enter' && findPokemon()}
-                />
-                <button onClick={findPokemon}>Search</button>
-            </div>
+            <input
+                type="text"
+                placeholder={'Pikachu'}
+                value={searchText}
+                onChange={e => setSearchText(e.target.value)}
+                onKeyDown={e => e.key === 'Enter' && findPokemon()}
+            />
+            <button onClick={findPokemon}>Search</button>
         </div>
     );
 };

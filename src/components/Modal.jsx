@@ -31,6 +31,7 @@ const Modal = ({modalActive, setModalActive}) => {
                         name="pets"
                         id="pet-select"
                         onChange={e => e.target.value !== "" && setType(e.target.value)}
+                        className={classes.select}
                     >
                         <option value="">None</option>
                         {
