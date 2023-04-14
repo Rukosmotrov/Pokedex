@@ -9,6 +9,7 @@ const Pagination = ({itemsPerPage, totalItems}) => {
         if (currentPage !== 1) {
             setCurrentPage(currentPage - 1);
             setFirstItem(firstItem - itemsPerPage);
+            window.scrollTo(0, 0);
         }
     }
 
@@ -16,6 +17,7 @@ const Pagination = ({itemsPerPage, totalItems}) => {
         if (currentPage !== Math.ceil(totalItems/ itemsPerPage)) {
             setCurrentPage(currentPage + 1);
             setFirstItem(firstItem + itemsPerPage);
+            window.scrollTo(0, 0);
         }
     }
 
