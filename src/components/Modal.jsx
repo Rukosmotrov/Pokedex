@@ -18,10 +18,6 @@ const Modal = ({modalActive, setModalActive}) => {
         setSelectedTypes(selectedTypes.filter(item => item !== type));
     }
 
-    useEffect(() => {
-        console.log('selected types: ', selectedTypes);
-    }, [selectedTypes]);
-
     return (
         <div className={`${classes.modalWindow} ${modalActive && classes.active}`} onClick={() => setModalActive(false)}>
             <div className={classes.modalContent} onClick={e => e.stopPropagation()}>
